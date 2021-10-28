@@ -17,6 +17,7 @@ import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -39,7 +40,7 @@ public class Persona {
 	
 	@CreationTimestamp
 	private Date created;
-	@LastModifiedDate
+	@UpdateTimestamp
 	private Date modified;
 	
 	@Column(name="lastLogin")
