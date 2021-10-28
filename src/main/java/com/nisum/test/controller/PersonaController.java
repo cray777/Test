@@ -34,22 +34,22 @@ public class PersonaController {
 	}
 
 	@GetMapping("/Persona/{id}")
-	public ResponseEntity<Persona> getPersonaById(@PathVariable long id) {
+	public ResponseEntity getPersonaById(@PathVariable long id) {
 		return ResponseEntity.ok().body(personaService.getPersonaById(id));
 	}
 
 	@PutMapping("/Persona/{id}")
-	public ResponseEntity<Persona> updatePersona(@PathVariable long id, @RequestBody Persona persona) {
+	public ResponseEntity updatePersona(@PathVariable long id, @RequestBody Persona persona) {
 		persona.setId(id);
 		return ResponseEntity.ok().body(this.personaService.updatePersona(persona));
 
 	}
 
 	@DeleteMapping("/Persona/{id}")
-	public HttpStatus deteltePersona(@PathVariable long id) {
-		this.personaService.deletePersona(id);
-		return HttpStatus.OK;
-
+	public ResponseEntity deteltePersona(@PathVariable long id) {
+		//;
+		//return HttpStatus.OK;
+		return ResponseEntity.ok().body(this.personaService.deletePersona(id));
 	}
 
 }

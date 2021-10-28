@@ -10,11 +10,11 @@ public interface PersonaService {
 
 	ResponseEntity<Persona> createPersona(Persona persona);
 
-	Persona updatePersona(Persona persona);
+	ResponseEntity updatePersona(Persona persona);
 
 	List<Persona> getAllPersona();
 
-	Persona getPersonaById(Long personaId);
+	ResponseEntity getPersonaById(Long personaId);
 
-	void deletePersona(Long personaId);
+	ResponseEntity deletePersona(Long personaId);
 }

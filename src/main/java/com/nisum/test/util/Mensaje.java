@@ -29,7 +29,16 @@ public class Mensaje {
 		   
 		}
 		
-
+		if(tipoError==4) {
+			map.put("Mesaje: ", "No se encuentra el id Ingresado");
+		    map.put("HttpStatus", HttpStatus.BAD_REQUEST.toString());
+		   
+		}
+		if(tipoError==5) {
+			map.put("Mesaje: ", "Registro eliminado con exito");
+		    map.put("HttpStatus", HttpStatus.OK.toString());
+		   
+		}
 		return map;
 	}
 }
